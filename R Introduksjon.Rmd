@@ -2,6 +2,9 @@
 title: "R Introduksjon"
 output: html_notebook
 ---
+```{r}
+
+```
 
 Hold inne CMD+Opt+I for å sette inn en chunk;
 Alternativt velg Insert - R
@@ -96,7 +99,11 @@ En tibble/dataframe er en liste av vektorer med samme lengde. Siden det er snakk
 df1 <- data.frame(x = 1:1000, y = rnorm(1000))
 df1_as_tib <- tibble(df1)
 # Prefer tibble
-tibl <- tibble(x = 1:1000, y = rnorm(1000))
+tibl <- tibble(x = 1:1000, y = rnorm(1000), z = rep(c("aa", "bb"), 500))
 tibl
+View(tibl)
+```
+```{r}
+# Siste
 ```
 
