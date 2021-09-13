@@ -1957,10 +1957,53 @@ typeof(t)</code></pre>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>R jobber med vektorer. Alle element må være av samme type, f.eks. numerisk. R konverterer automatisk til mer generell type; viser f.eks. desimal/type double fremfor heltall. Characters er den mest generelle typen vi har.</p>
+<div id="lister" class="section level2">
+<h2>Lister</h2>
+<p>Vi bruker kolon mellom to tall for å angi alle talene i rekken</p>
+<ul>
+<li>Vi bruker <em>str</em> for å vise strukturen i listen vår: <strong>List of 4</strong></li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubCA8LSBsaXN0ICh4ID0gMTo0LFxuICAgICAgICAgICB5ID0gYyhUUlVFLCBGQUxTRSwgRkFMU0UpLFxuICAgICAgICAgICB6ID0gYyhcImFhXCIsIFwiYmFcIiksXG4gICAgICAgICAgIHp6ID0gYygyLjEsIDQuMzMpKVxuc3RyKGwpXG5gYGAifQ== -->
+<pre class="r"><code>l &lt;- list (x = 1:4,
+           y = c(TRUE, FALSE, FALSE),
+           z = c(&quot;aa&quot;, &quot;ba&quot;),
+           zz = c(2.1, 4.33))
+str(l)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiTGlzdCBvZiA0XG4gJCB4IDogaW50IFsxOjRdIDEgMiAzIDRcbiAkIHkgOiBsb2dpIFsxOjNdIFRSVUUgRkFMU0UgRkFMU0VcbiAkIHogOiBjaHIgWzE6Ml0gXCJhYVwiIFwiYmFcIlxuICQgeno6IG51bSBbMToyXSAyLjEgNC4zM1xuIn0= -->
+<pre><code>List of 4
+ $ x : int [1:4] 1 2 3 4
+ $ y : logi [1:3] TRUE FALSE FALSE
+ $ z : chr [1:2] &quot;aa&quot; &quot;ba&quot;
+ $ zz: num [1:2] 2.1 4.33</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubFsyXVxuYGBgIn0= -->
+<pre class="r"><code>l[2]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiJHlcblsxXSAgVFJVRSBGQUxTRSBGQUxTRVxuIn0= -->
+<pre><code>$y
+[1]  TRUE FALSE FALSE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubFtbMl1dXG5gYGAifQ== -->
+<pre class="r"><code>l[[2]]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdICBUUlVFIEZBTFNFIEZBTFNFXG4ifQ== -->
+<pre><code>[1]  TRUE FALSE FALSE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+</div>
+<div id="dataframes" class="section level1">
+<h1>Dataframes</h1>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBJbnRyb2R1a3Nqb24iCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCkhvbGQgaW5uZSBDTUQrT3B0K0kgZm9yIMOlIHNldHRlIGlubiBlbiBjaHVuazsKQWx0ZXJuYXRpdnQgdmVsZyBJbnNlcnQgLSBSCgoqIFZpIHNrcml2ZXIgZGVyZXR0ZXIgaW5uIGYuZWtzLiAyKzIsIG9nIHRyeWtrZXIgQ01EK0VudGVyIGZvciDDpSBrasO4cmUgdXRyZWduaW5nZW4KKiBEZXJldHRlciBhbmdpciB2aSAoYXNzaWduKSB4IHRpbCDDpSB2w6ZyZSByZXN1bHRhdGV0IGF2IHV0cmVnbmluZ2VuIHZlZCDDpSBza3JpdmUgPC0KYGBge3J9CjIgKyAyCnggPC0gMiArIDIKeApgYGAKRm9yIMOlIHNlIGh2YSAyKzIgYmxpciwgc2FtdGlkaWcgc29tIG1hbiB2aWwgc2UgaHZhIHggaW5uZWhvbGRlciwgc8OlIHNldHRlciBtYW4gZnVua3Nqb2VuIGkgcGFyYW50ZXMgc2xpayAoeSA8LSAzICsgMyk6CmBgYHtyfQooeSA8LSAzICsgMykKYGBgCkFsdGVybmF0aXYgbcOldGUgw6UgYW5naSBlbiB2ZXJkaSAoYXNzaWdubWVudCkgZXIgw6UgYnJ1a2UgdGVnbmV0ID0gLCBtZW4gZGV0dGUgZXIgaWtrZSBhbmJlZmFsdC4KYGBge3J9CnogPSA0CnoKYGBgCkZvciDDpSBmamVybmUgdGluZyBpIFIsIHPDpSBicnVrZXIgdmkgZnVua3Nqb25lbiAqcm0qCmBgYHtyfQpybSh6KQpgYGAKCmBgYHtyfQp4XnkKeC15CmBgYAoKIyMjIyBDb21iaW5lLWZ1bmtzam9uCmBgYHtyfQp4IDwtIGMoMiwgNywgOSwgMTMpCnkgPC0gYyg2LCAyKQp6ID0geCArIHkKeSA8LSBjKHksIDMpCnkKKHogPC0geCArIHkpCmBgYAoKIyBUeXBlciBhdiB2ZWt0b3JlcgoqQ2xhc3MqIHZpc2VyIGh2aWxrZW4ga2xhc3NlIHggZXIuIFZpIHNraWxsZXIgbWVsbG9tIGhlbHRhbGwgKCplbmc6KiAqKmludGVnZXIqKikgb2cgZGVzaW1hbHRhbGwuCgoqVHlwZW9mKiB2aXNlciBodmEgc2xhZ3MgdHlwZSBvYmpla3QgZGV0IGVyCmBgYHtyfQpjbGFzcyh4KQp0eXBlb2YoeCkKeCA8LSAyTAp0eXBlb2YoeCkKeCA8LSAyLgp0eXBlb2YoeCkKeCA8LSAyTAp5IDwtIDQuMQp0eXBlb2YoeCkKdHlwZW9mKHkpCnogPC0gYyh4LCB5KQp0eXBlb2YoeikKeiA8LSBjKHgsIHksICJzIikKdHlwZW9mKHopCnpbMV0KelsyXQp4CnkKeCArIHkKdCA8LSB4ICsgeQp0eXBlb2YodCkKdAoiYmxhYmFsYmFsYmxhYmxhbGIiCmBgYApSIGpvYmJlciBtZWQgdmVrdG9yZXIuIEFsbGUgZWxlbWVudCBtw6UgdsOmcmUgYXYgc2FtbWUgdHlwZSwgZi5la3MuIG51bWVyaXNrLiBSIGtvbnZlcnRlcmVyIGF1dG9tYXRpc2sgdGlsIG1lciBnZW5lcmVsbCB0eXBlOyB2aXNlciBmLmVrcy4gZGVzaW1hbC90eXBlIGRvdWJsZSBmcmVtZm9yIGhlbHRhbGwuIENoYXJhY3RlcnMgZXIgZGVuIG1lc3QgZ2VuZXJlbGxlIHR5cGVuIHZpIGhhci4K</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBJbnRyb2R1a3Nqb24iCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCkhvbGQgaW5uZSBDTUQrT3B0K0kgZm9yIMOlIHNldHRlIGlubiBlbiBjaHVuazsKQWx0ZXJuYXRpdnQgdmVsZyBJbnNlcnQgLSBSCgoqIFZpIHNrcml2ZXIgZGVyZXR0ZXIgaW5uIGYuZWtzLiAyKzIsIG9nIHRyeWtrZXIgQ01EK0VudGVyIGZvciDDpSBrasO4cmUgdXRyZWduaW5nZW4KKiBEZXJldHRlciBhbmdpciB2aSAoYXNzaWduKSB4IHRpbCDDpSB2w6ZyZSByZXN1bHRhdGV0IGF2IHV0cmVnbmluZ2VuIHZlZCDDpSBza3JpdmUgPC0KYGBge3J9CjIgKyAyCnggPC0gMiArIDIKeApgYGAKRm9yIMOlIHNlIGh2YSAyKzIgYmxpciwgc2FtdGlkaWcgc29tIG1hbiB2aWwgc2UgaHZhIHggaW5uZWhvbGRlciwgc8OlIHNldHRlciBtYW4gZnVua3Nqb2VuIGkgcGFyYW50ZXMgc2xpayAoeSA8LSAzICsgMyk6CmBgYHtyfQooeSA8LSAzICsgMykKYGBgCkFsdGVybmF0aXYgbcOldGUgw6UgYW5naSBlbiB2ZXJkaSAoYXNzaWdubWVudCkgZXIgw6UgYnJ1a2UgdGVnbmV0ID0gLCBtZW4gZGV0dGUgZXIgaWtrZSBhbmJlZmFsdC4KYGBge3J9CnogPSA0CnoKYGBgCkZvciDDpSBmamVybmUgdGluZyBpIFIsIHPDpSBicnVrZXIgdmkgZnVua3Nqb25lbiAqcm0qCmBgYHtyfQpybSh6KQpgYGAKCmBgYHtyfQp4XnkKeC15CmBgYAoKIyMjIyBDb21iaW5lLWZ1bmtzam9uCmBgYHtyfQp4IDwtIGMoMiwgNywgOSwgMTMpCnkgPC0gYyg2LCAyKQp6ID0geCArIHkKeSA8LSBjKHksIDMpCnkKKHogPC0geCArIHkpCmBgYAoKIyBUeXBlciBhdiB2ZWt0b3JlcgoqQ2xhc3MqIHZpc2VyIGh2aWxrZW4ga2xhc3NlIHggZXIuIFZpIHNraWxsZXIgbWVsbG9tIGhlbHRhbGwgKCplbmc6KiAqKmludGVnZXIqKikgb2cgZGVzaW1hbHRhbGwuCgoqVHlwZW9mKiB2aXNlciBodmEgc2xhZ3MgdHlwZSBvYmpla3QgZGV0IGVyCmBgYHtyfQpjbGFzcyh4KQp0eXBlb2YoeCkKeCA8LSAyTAp0eXBlb2YoeCkKeCA8LSAyLgp0eXBlb2YoeCkKeCA8LSAyTAp5IDwtIDQuMQp0eXBlb2YoeCkKdHlwZW9mKHkpCnogPC0gYyh4LCB5KQp0eXBlb2YoeikKeiA8LSBjKHgsIHksICJzIikKdHlwZW9mKHopCnpbMV0KelsyXQp4CnkKeCArIHkKdCA8LSB4ICsgeQp0eXBlb2YodCkKdAoiYmxhYmFsYmFsYmxhYmxhbGIiCmBgYApSIGpvYmJlciBtZWQgdmVrdG9yZXIuIEFsbGUgZWxlbWVudCBtw6UgdsOmcmUgYXYgc2FtbWUgdHlwZSwgZi5la3MuIG51bWVyaXNrLiBSIGtvbnZlcnRlcmVyIGF1dG9tYXRpc2sgdGlsIG1lciBnZW5lcmVsbCB0eXBlOyB2aXNlciBmLmVrcy4gZGVzaW1hbC90eXBlIGRvdWJsZSBmcmVtZm9yIGhlbHRhbGwuIENoYXJhY3RlcnMgZXIgZGVuIG1lc3QgZ2VuZXJlbGxlIHR5cGVuIHZpIGhhci4KCiMjIExpc3RlcgpWaSBicnVrZXIga29sb24gbWVsbG9tIHRvIHRhbGwgZm9yIMOlIGFuZ2kgYWxsZSB0YWxlbmUgaSByZWtrZW4KCiogVmkgYnJ1a2VyICpzdHIqIGZvciDDpSB2aXNlIHN0cnVrdHVyZW4gaSBsaXN0ZW4gdsOlcjogKipMaXN0IG9mIDQqKgpgYGB7cn0KbCA8LSBsaXN0ICh4ID0gMTo0LAogICAgICAgICAgIHkgPSBjKFRSVUUsIEZBTFNFLCBGQUxTRSksCiAgICAgICAgICAgeiA9IGMoImFhIiwgImJhIiksCiAgICAgICAgICAgenogPSBjKDIuMSwgNC4zMykpCnN0cihsKQpgYGAKYGBge3J9CmxbMl0KbFtbMl1dCmBgYAoKIyBEYXRhZnJhbWVzCg==</div>
 
 
 

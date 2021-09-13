@@ -72,3 +72,21 @@ t
 "blabalbalblablalb"
 ```
 R jobber med vektorer. Alle element må være av samme type, f.eks. numerisk. R konverterer automatisk til mer generell type; viser f.eks. desimal/type double fremfor heltall. Characters er den mest generelle typen vi har.
+
+## Lister
+Vi bruker kolon mellom to tall for å angi alle talene i rekken
+
+* Vi bruker *str* for å vise strukturen i listen vår: **List of 4**
+```{r}
+l <- list (x = 1:4,
+           y = c(TRUE, FALSE, FALSE),
+           z = c("aa", "ba"),
+           zz = c(2.1, 4.33))
+str(l)
+```
+```{r}
+l[2]
+l[[2]]
+```
+
+# Dataframes
