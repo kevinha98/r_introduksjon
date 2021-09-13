@@ -1757,9 +1757,15 @@ pre code {
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueFxuXG5gYGAifQ== -->
-<pre class="r"><code>x
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMiArIDJcbmBgYCJ9 -->
+<pre class="r"><code>2 + 2</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDRcbiJ9 -->
+<pre><code>[1] 4</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSAyICsgMlxueFxuYGBgIn0= -->
+<pre class="r"><code>x &lt;- 2 + 2
+x</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIDRcbiJ9 -->
 <pre><code>[1] 4</code></pre>
@@ -1772,30 +1778,29 @@ pre code {
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuKHkgPC0gMyArIDMpXG5gYGAifQ== -->
 <pre class="r"><code>(y &lt;- 3 + 3)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDZcbiJ9 -->
+<pre><code>[1] 6</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Alternativ måte å angi en verdi (assignment) er å bruke tegnet = , men dette er ikke anbefalt.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuelxuXG5gYGAifQ== -->
-<pre class="r"><code>z
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueiA9IDRcbnpcbmBgYCJ9 -->
+<pre class="r"><code>z = 4
+z</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIDRcbiJ9 -->
 <pre><code>[1] 4</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>For å fjerne ting i R, så bruker vi funksjonen “rm”</p>
+<p>For å fjerne ting i R, så bruker vi funksjonen <em>rm</em></p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm0oeilcblxuYGBgIn0= -->
-<pre class="r"><code>rm(z)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm0oeilcbmBgYCJ9 -->
+<pre class="r"><code>rm(z)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoib2JqZWN0ICd6JyBub3QgZm91bmRcbiJ9 -->
-<pre><code>object &#39;z&#39; not found</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -1839,10 +1844,123 @@ y</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+</div>
+<div id="typer-av-vektorer" class="section level1">
+<h1>Typer av vektorer</h1>
+<p><em>Class</em> viser hvilken klasse x er. Vi skiller mellom heltall (<em>eng:</em> <strong>integer</strong>) og desimaltall.</p>
+<p><em>Typeof</em> viser hva slags type objekt det er</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoeClcbmBgYCJ9 -->
+<pre class="r"><code>class(x)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibnVtZXJpY1wiXG4ifQ== -->
+<pre><code>[1] &quot;numeric&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHlwZW9mKHgpXG5gYGAifQ== -->
+<pre class="r"><code>typeof(x)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZG91YmxlXCJcbiJ9 -->
+<pre><code>[1] &quot;double&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSAyTFxudHlwZW9mKHgpXG5gYGAifQ== -->
+<pre class="r"><code>x &lt;- 2L
+typeof(x)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW50ZWdlclwiXG4ifQ== -->
+<pre><code>[1] &quot;integer&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSAyLlxudHlwZW9mKHgpXG5gYGAifQ== -->
+<pre class="r"><code>x &lt;- 2.
+typeof(x)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZG91YmxlXCJcbiJ9 -->
+<pre><code>[1] &quot;double&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSAyTFxueSA8LSA0LjFcbnR5cGVvZih4KVxuYGBgIn0= -->
+<pre class="r"><code>x &lt;- 2L
+y &lt;- 4.1
+typeof(x)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW50ZWdlclwiXG4ifQ== -->
+<pre><code>[1] &quot;integer&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHlwZW9mKHkpXG5gYGAifQ== -->
+<pre class="r"><code>typeof(y)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZG91YmxlXCJcbiJ9 -->
+<pre><code>[1] &quot;double&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueiA8LSBjKHgsIHkpXG50eXBlb2YoeilcbmBgYCJ9 -->
+<pre class="r"><code>z &lt;- c(x, y)
+typeof(z)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZG91YmxlXCJcbiJ9 -->
+<pre><code>[1] &quot;double&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueiA8LSBjKHgsIHksIFwic1wiKVxudHlwZW9mKHopXG5gYGAifQ== -->
+<pre class="r"><code>z &lt;- c(x, y, &quot;s&quot;)
+typeof(z)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiY2hhcmFjdGVyXCJcbiJ9 -->
+<pre><code>[1] &quot;character&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuelsxXVxuYGBgIn0= -->
+<pre class="r"><code>z[1]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMlwiXG4ifQ== -->
+<pre><code>[1] &quot;2&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuelsyXVxuYGBgIn0= -->
+<pre class="r"><code>z[2]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiNC4xXCJcbiJ9 -->
+<pre><code>[1] &quot;4.1&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueFxuYGBgIn0= -->
+<pre class="r"><code>x</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDJcbiJ9 -->
+<pre><code>[1] 2</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueVxuYGBgIn0= -->
+<pre class="r"><code>y</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDQuMVxuIn0= -->
+<pre><code>[1] 4.1</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCArIHlcbmBgYCJ9 -->
+<pre class="r"><code>x + y</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDYuMVxuIn0= -->
+<pre><code>[1] 6.1</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudCA8LSB4ICsgeVxudHlwZW9mKHQpXG5gYGAifQ== -->
+<pre class="r"><code>t &lt;- x + y
+typeof(t)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZG91YmxlXCJcbiJ9 -->
+<pre><code>[1] &quot;double&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudFxuYGBgIn0= -->
+<pre class="r"><code>t</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDYuMVxuIn0= -->
+<pre><code>[1] 6.1</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXCJibGFiYWxiYWxibGFibGFsYlwiXG5gYGAifQ== -->
+<pre class="r"><code>&quot;blabalbalblablalb&quot;</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiYmxhYmFsYmFsYmxhYmxhbGJcIlxuIn0= -->
+<pre><code>[1] &quot;blabalbalblablalb&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>R jobber med vektorer. Alle element må være av samme type, f.eks. numerisk. R konverterer automatisk til mer generell type; viser f.eks. desimal/type double fremfor heltall. Characters er den mest generelle typen vi har.</p>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBJbnRyb2R1a3Nqb24iCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCkhvbGQgaW5uZSBDTUQrT3B0K0kgZm9yIMOlIHNldHRlIGlubiBlbiBjaHVuazsKQWx0ZXJuYXRpdnQgdmVsZyBJbnNlcnQgLSBSCgoqIFZpIHNrcml2ZXIgZGVyZXR0ZXIgaW5uIGYuZWtzLiAyKzIsIG9nIHRyeWtrZXIgQ01EK0VudGVyIGZvciDDpSBrasO4cmUgdXRyZWduaW5nZW4KKiBEZXJldHRlciBhbmdpciB2aSAoYXNzaWduKSB4IHRpbCDDpSB2w6ZyZSByZXN1bHRhdGV0IGF2IHV0cmVnbmluZ2VuIHZlZCDDpSBza3JpdmUgPC0KYGBge3J9CjIgKyAyCnggPC0gMiArIDIKeApgYGAKRm9yIMOlIHNlIGh2YSAyKzIgYmxpciwgc2FtdGlkaWcgc29tIG1hbiB2aWwgc2UgaHZhIHggaW5uZWhvbGRlciwgc8OlIHNldHRlciBtYW4gZnVua3Nqb2VuIGkgcGFyYW50ZXMgc2xpayAoeSA8LSAzICsgMyk6CmBgYHtyfQooeSA8LSAzICsgMykKYGBgCkFsdGVybmF0aXYgbcOldGUgw6UgYW5naSBlbiB2ZXJkaSAoYXNzaWdubWVudCkgZXIgw6UgYnJ1a2UgdGVnbmV0ID0gLCBtZW4gZGV0dGUgZXIgaWtrZSBhbmJlZmFsdC4KYGBge3J9CnogPSA0CnoKYGBgCkZvciDDpSBmamVybmUgdGluZyBpIFIsIHPDpSBicnVrZXIgdmkgZnVua3Nqb25lbiAicm0iCmBgYHtyfQpybSh6KQpgYGAKCmBgYHtyfQp4XnkKeC15CmBgYAoKIyMjIyBDb21iaW5lLWZ1bmtzam9uCmBgYHtyfQp4IDwtIGMoMiwgNywgOSwgMTMpCnkgPC0gYyg2LCAyKQp6ID0geCArIHkKeSA8LSBjKHksIDMpCnkKKHogPC0geCArIHkpCmBgYAoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBJbnRyb2R1a3Nqb24iCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCkhvbGQgaW5uZSBDTUQrT3B0K0kgZm9yIMOlIHNldHRlIGlubiBlbiBjaHVuazsKQWx0ZXJuYXRpdnQgdmVsZyBJbnNlcnQgLSBSCgoqIFZpIHNrcml2ZXIgZGVyZXR0ZXIgaW5uIGYuZWtzLiAyKzIsIG9nIHRyeWtrZXIgQ01EK0VudGVyIGZvciDDpSBrasO4cmUgdXRyZWduaW5nZW4KKiBEZXJldHRlciBhbmdpciB2aSAoYXNzaWduKSB4IHRpbCDDpSB2w6ZyZSByZXN1bHRhdGV0IGF2IHV0cmVnbmluZ2VuIHZlZCDDpSBza3JpdmUgPC0KYGBge3J9CjIgKyAyCnggPC0gMiArIDIKeApgYGAKRm9yIMOlIHNlIGh2YSAyKzIgYmxpciwgc2FtdGlkaWcgc29tIG1hbiB2aWwgc2UgaHZhIHggaW5uZWhvbGRlciwgc8OlIHNldHRlciBtYW4gZnVua3Nqb2VuIGkgcGFyYW50ZXMgc2xpayAoeSA8LSAzICsgMyk6CmBgYHtyfQooeSA8LSAzICsgMykKYGBgCkFsdGVybmF0aXYgbcOldGUgw6UgYW5naSBlbiB2ZXJkaSAoYXNzaWdubWVudCkgZXIgw6UgYnJ1a2UgdGVnbmV0ID0gLCBtZW4gZGV0dGUgZXIgaWtrZSBhbmJlZmFsdC4KYGBge3J9CnogPSA0CnoKYGBgCkZvciDDpSBmamVybmUgdGluZyBpIFIsIHPDpSBicnVrZXIgdmkgZnVua3Nqb25lbiAqcm0qCmBgYHtyfQpybSh6KQpgYGAKCmBgYHtyfQp4XnkKeC15CmBgYAoKIyMjIyBDb21iaW5lLWZ1bmtzam9uCmBgYHtyfQp4IDwtIGMoMiwgNywgOSwgMTMpCnkgPC0gYyg2LCAyKQp6ID0geCArIHkKeSA8LSBjKHksIDMpCnkKKHogPC0geCArIHkpCmBgYAoKIyBUeXBlciBhdiB2ZWt0b3JlcgoqQ2xhc3MqIHZpc2VyIGh2aWxrZW4ga2xhc3NlIHggZXIuIFZpIHNraWxsZXIgbWVsbG9tIGhlbHRhbGwgKCplbmc6KiAqKmludGVnZXIqKikgb2cgZGVzaW1hbHRhbGwuCgoqVHlwZW9mKiB2aXNlciBodmEgc2xhZ3MgdHlwZSBvYmpla3QgZGV0IGVyCmBgYHtyfQpjbGFzcyh4KQp0eXBlb2YoeCkKeCA8LSAyTAp0eXBlb2YoeCkKeCA8LSAyLgp0eXBlb2YoeCkKeCA8LSAyTAp5IDwtIDQuMQp0eXBlb2YoeCkKdHlwZW9mKHkpCnogPC0gYyh4LCB5KQp0eXBlb2YoeikKeiA8LSBjKHgsIHksICJzIikKdHlwZW9mKHopCnpbMV0KelsyXQp4CnkKeCArIHkKdCA8LSB4ICsgeQp0eXBlb2YodCkKdAoiYmxhYmFsYmFsYmxhYmxhbGIiCmBgYApSIGpvYmJlciBtZWQgdmVrdG9yZXIuIEFsbGUgZWxlbWVudCBtw6UgdsOmcmUgYXYgc2FtbWUgdHlwZSwgZi5la3MuIG51bWVyaXNrLiBSIGtvbnZlcnRlcmVyIGF1dG9tYXRpc2sgdGlsIG1lciBnZW5lcmVsbCB0eXBlOyB2aXNlciBmLmVrcy4gZGVzaW1hbC90eXBlIGRvdWJsZSBmcmVtZm9yIGhlbHRhbGwuIENoYXJhY3RlcnMgZXIgZGVuIG1lc3QgZ2VuZXJlbGxlIHR5cGVuIHZpIGhhci4K</div>
 
 
 

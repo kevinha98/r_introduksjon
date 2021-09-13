@@ -22,7 +22,7 @@ Alternativ måte å angi en verdi (assignment) er å bruke tegnet = , men dette 
 z = 4
 z
 ```
-For å fjerne ting i R, så bruker vi funksjonen "rm"
+For å fjerne ting i R, så bruker vi funksjonen *rm*
 ```{r}
 rm(z)
 ```
@@ -42,3 +42,33 @@ y
 (z <- x + y)
 ```
 
+# Typer av vektorer
+*Class* viser hvilken klasse x er. Vi skiller mellom heltall (*eng:* **integer**) og desimaltall.
+
+*Typeof* viser hva slags type objekt det er
+```{r}
+class(x)
+typeof(x)
+x <- 2L
+typeof(x)
+x <- 2.
+typeof(x)
+x <- 2L
+y <- 4.1
+typeof(x)
+typeof(y)
+z <- c(x, y)
+typeof(z)
+z <- c(x, y, "s")
+typeof(z)
+z[1]
+z[2]
+x
+y
+x + y
+t <- x + y
+typeof(t)
+t
+"blabalbalblablalb"
+```
+R jobber med vektorer. Alle element må være av samme type, f.eks. numerisk. R konverterer automatisk til mer generell type; viser f.eks. desimal/type double fremfor heltall. Characters er den mest generelle typen vi har.
