@@ -90,3 +90,13 @@ l[[2]]
 ```
 
 # Dataframes
+Dataframes har en nær slektning i Tidyverse som heter tibble
+En tibble/dataframe er en liste av vektorer med samme lengde. Siden det er snakk om vektorer, så vil hver av kolonnene være av samme type. Dvs. at alle x'ene er heltall, og alle y'ene er i dette tilfellet *double*/desimaltall
+```{r}
+df1 <- data.frame(x = 1:1000, y = rnorm(1000))
+df1_as_tib <- tibble(df1)
+# Prefer tibble
+tibl <- tibble(x = 1:1000, y = rnorm(1000))
+tibl
+```
+
