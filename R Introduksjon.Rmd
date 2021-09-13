@@ -1,0 +1,44 @@
+---
+title: "R Introduksjon"
+output: html_notebook
+---
+
+Hold inne CMD+Opt+I for å sette inn en chunk;
+Alternativt velg Insert - R
+
+* Vi skriver deretter inn f.eks. 2+2, og trykker CMD+Enter for å kjøre utregningen
+* Deretter angir vi (assign) x til å være resultatet av utregningen ved å skrive <-
+```{r}
+2 + 2
+x <- 2 + 2
+x
+```
+For å se hva 2+2 blir, samtidig som man vil se hva x inneholder, så setter man funksjoen i parantes slik (y <- 3 + 3):
+```{r}
+(y <- 3 + 3)
+```
+Alternativ måte å angi en verdi (assignment) er å bruke tegnet = , men dette er ikke anbefalt.
+```{r}
+z = 4
+z
+```
+For å fjerne ting i R, så bruker vi funksjonen "rm"
+```{r}
+rm(z)
+```
+
+```{r}
+x^y
+x-y
+```
+
+#### Combine-funksjon
+```{r}
+x <- c(2, 7, 9, 13)
+y <- c(6, 2)
+z = x + y
+y <- c(y, 3)
+y
+(z <- x + y)
+```
+
